@@ -1,0 +1,51 @@
+{
+    "name": "contaoblackforest/contao-bootstrap-form-datetimepicker",
+    "description": "Bootstrap datetimepicker for forms in Contao CMS",
+    "keywords": [
+        "bootstrap",
+        "form",
+        "datepicker",
+        "contao"
+    ],
+    "type": "contao-module",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Sven Baumann",
+            "email": "baumann.sv@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Dominik Tomasi",
+            "email": "dominik.tomasi@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "baumann.sv@gmail.com",
+        "issues": "https://github.com/ContaoBlackForest/contao-bootstrap-form-datetimepicker/issues",
+        "source": "https://github.com/ContaoBlackForest/contao-bootstrap-form-datetimepicker"
+    },
+    "require": {
+        "php": ">=5.3.4",
+        "contao/core": ">=3.2,<3.6",
+        "contao-community-alliance/composer-plugin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ContaoBlackForest\\Bootstrap\\Form\\DateTimePicker": "src"
+        }
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "contao": "system/modules/contao-bootstrap-form-datetimepicker"
+            }
+        },
+        "branch-alias": {
+            "dev-develop": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
