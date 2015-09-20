@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ContaoBlackForest\\Bootstrap\\Form\\DateTimePicker": "src"
+            "ContaoBlackForest\\Bootstrap\\Form\\DateTimePicker\\": "src"
         }
     },
     "extra": {
