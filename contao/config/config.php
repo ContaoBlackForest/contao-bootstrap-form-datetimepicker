@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Bootstrap datetimepicker for forms in Contao CMS
  *
@@ -11,6 +12,7 @@
  * @license   GNU/LGPL
  * @copyright Copyright 2015 ContaoBlackForest
  */
+
 
 /**
  * Form fields
