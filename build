@@ -1,0 +1,28 @@
+#!/bin/sh
+
+bower install
+
+mkdir contao
+mkdir contao/assets
+mkdir contao/assets/bs-datetimepicker
+mkdir contao/assets/bs-datetimepicker/css
+mkdir contao/assets/bs-datetimepicker/js
+mkdir contao/assets/bs-datetimepicker/js/locale
+mkdir contao/assets/bs-datetimepicker/less
+mkdir contao/assets/bs-datetimepicker/sass
+
+echo "<IfModule !mod_authz_core.c>\n\tOrder allow,deny\n\tAllow from all\n</IfModule>\n<IfModule mod_authz_core.c>\n\tRequire all granted\n</IfModule>" > contao/assets/.htaccess
+
+cp -f bower_components/eonasdan-bootstrap-datetimepicker/src/js/* contao/assets/bs-datetimepicker/js
+cp -f bower_components/eonasdan-bootstrap-datetimepicker/src/less/* contao/assets/bs-datetimepicker/less
+cp -f bower_components/eonasdan-bootstrap-datetimepicker/src/sass/* contao/assets/bs-datetimepicker/sass
+
+cp -f bower_components/eonasdan-bootstrap-datetimepicker/build/js/* contao/assets/bs-datetimepicker/js
+cp -f bower_components/eonasdan-bootstrap-datetimepicker/build/css/* contao/assets/bs-datetimepicker/css
+
+
+cp -f bower_components/moment/moment.js contao/assets/bs-datetimepicker/js
+cp -f bower_components/moment/min/* contao/assets/bs-datetimepicker/js
+cp -f bower_components/moment/locale/* contao/assets/bs-datetimepicker/js/locale
+
+rm -r bower_components
