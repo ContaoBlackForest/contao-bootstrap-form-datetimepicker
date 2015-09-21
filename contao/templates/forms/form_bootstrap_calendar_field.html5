@@ -1,0 +1,8 @@
+<div id="datetimepicker_<?php echo $this->id; ?>" class="input-group date">
+    <?php echo $this->input; ?>
+    <?php if ($this->icon): ?>
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    <?php endif; ?>
+</div>
