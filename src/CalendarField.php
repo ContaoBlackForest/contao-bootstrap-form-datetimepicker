@@ -57,6 +57,7 @@ class CalendarField extends FormTextField
         $template->input = parent::generate();
         $template->id    = $this->id;
         $template->icon  = $this->bsDateImage;
+        $template->name  = $this->name;
 
         return $template->parse();
     }
