@@ -101,6 +101,7 @@ class CalendarField extends FormTextField
 
         switch ($this->bsDateDirection) {
             case 'geToday':
+                $time->modify('today');
                 return $time->format('Y-m-d H:i:s');
             case 'gtToday':
                 $time->modify('+1 day');
@@ -124,6 +125,7 @@ class CalendarField extends FormTextField
                 $time->modify('-1 day');
                 return $time->format('Y-m-d H:i:s');
             case 'leToday':
+                $time->modify('today');
                 return $time->format('Y-m-d H:i:s');
         }
 
