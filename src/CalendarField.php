@@ -64,9 +64,9 @@ class CalendarField extends FormTextField
 
     protected function validator($varInput)
     {
-        return parent::validator($varInput);
+        return $varInput;
 
-        // TODO: Implement own methode
+        // TODO: Implement own method
     }
 
 
@@ -79,7 +79,7 @@ class CalendarField extends FormTextField
     {
         return array(
             'locale'           => $this->getPickerLanguage(),
-            'format'           => Date::getInputFormat($this->getDateFormat()),
+            'format'           => $this->getDateFormat(),
             'ignoreReadonly'   => $this->parseIgnoreReadonly(),
             'useCurrent'       => false,
             'allowInputToggle' => true,
@@ -217,11 +217,20 @@ class CalendarField extends FormTextField
      */
     protected function getDateFormat()
     {
+        $value =  Config::get($this->rgxp . 'Format');
+
         if ($this->bsDateFormat) {
-            return $this->bsDateFormat;
+            $value =  $this->bsDateFormat;
         }
 
-        return Config::get($this->rgxp . 'Format');
+        $value = Date::getInputFormat($value);
+
+        // TODO make optional 24 hours mode
+        if (preg_match('[hh]', $value)) {
+            $value = str_replace('hh', 'H', $value);
+        }
+
+        return $value;
     }
 
     /**
