@@ -64,9 +64,9 @@ class CalendarField extends FormTextField
 
     protected function validator($varInput)
     {
-        return parent::validator($varInput);
+        return $varInput;
 
-        // TODO: Implement own methode
+        // TODO: Implement own method
     }
 
 
