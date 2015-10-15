@@ -227,7 +227,7 @@ class CalendarField extends FormTextField
 
         // TODO make optional 24 hours mode
         if (preg_match('[hh]', $value)) {
-            $value = str_replace('hh', 'H', $value);
+            $value = str_replace('hh', 'HH', $value);
         }
 
         return $value;
