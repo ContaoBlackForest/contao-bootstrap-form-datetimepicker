@@ -226,6 +226,7 @@ class CalendarField extends FormTextField
         $value = Date::getInputFormat($value);
 
         // TODO make optional 24 hours mode
+        // TODO add compare Version when the bug in Contao fixed
         if (preg_match('[hh]', $value)) {
             $value = str_replace('hh', 'HH', $value);
         }
